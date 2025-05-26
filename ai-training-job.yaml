@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ai-demo-job
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+      - name: trainer
+        image: pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
+        command: ["python", "-c", "import torch; print(torch.rand(2, 2))"]
+      restartPolicy: Never
+  backoffLimit: 1
