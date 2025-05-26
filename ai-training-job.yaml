@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ai-demo-job
+  name: ai-demo-job2
   namespace: default
 spec:
   template:
