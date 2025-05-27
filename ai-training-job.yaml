@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ai-model-training-03
+  name: ai-model-training-new
   namespace: default
 spec:
   template:
@@ -9,6 +9,6 @@ spec:
       containers:
       - name: trainer
         image: pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
-        command: ["python", "-c", "import torch; print(torch.rand(2, 2))"]
+        command: ["python", "-c", "import torch; print(torch.rand(4, 4))"]
       restartPolicy: Never
   backoffLimit: 1
