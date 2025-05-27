@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ai-model-training-01
+  name: ai-model-training-02
   namespace: default
 spec:
   template:
