@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ai-model-training-03
+  name: ai-model-training-04
   namespace: default
 spec:
   template:
@@ -23,6 +23,6 @@ spec:
           }
           print(json.dumps(log))
           sys.stdout.flush()
-          time.sleep(30)
+          time.sleep(20)
       restartPolicy: Never
   backoffLimit: 1
